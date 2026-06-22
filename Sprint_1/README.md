@@ -4,7 +4,7 @@
 Hello! I'm Ujjawal, and I have successfully built and deployed the landing page module for Prodesk IT, completing all deliverables across Phase 1, Phase 2, and Phase 3.
 
 ###  Live Demo & Preview
-- **Live URL:** [https://sprint1-zeta.vercel.app/](https://sprint1-zeta.vercel.app/)
+- **Live URL:** (https://prodesk-theta.vercel.app/) 
  
 
 ###  Tech Stack

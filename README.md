@@ -16,7 +16,7 @@ This repository documents the technical contributions, core modules, and full-st
 
 | Sl. No. |Project| Core Focus | Stack Used | Live Link |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 |Prodesk Landing Page|Responsive marketing landing page|HTML5, Tailwind CSS, Node.js| [Live Link](https://sprint1-zeta.vercel.app/) |
+| 1 |Prodesk Landing Page|Responsive marketing landing page|HTML5, Tailwind CSS, Node.js| [Live Link](https://prodesk-theta.vercel.app/) |
 
 ---
 ## Sprint_1 - Prodesk Landing Page
@@ -29,4 +29,4 @@ Sprint_1 delivers a responsive landing page implementation using Tailwind CSS th
 * *Build pipeline for generated CSS output.*
 
 ## Directory: Sprint_1
-*Live:https://sprint1-zeta.vercel.app/*
+*https://prodesk-theta.vercel.app/
