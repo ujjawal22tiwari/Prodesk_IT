@@ -5,125 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prodesk IT</title>
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='28' font-family='Arial, sans-serif' font-weight='700' fill='white'%3EPD%3C/text%3E%3C/svg%3E" />
-  <link rel="preload" href="./styles/tailwind.css" as="style" />
-  <link rel="preload" as="image" href="./Img_1.jpg" imagesrcset="./heroimage-360.avif 360w, ./heroimage-520.avif 520w"
-    imagesizes="(min-width: 768px) 455px, calc(100vw - 3rem)" fetchpriority="high" />
-
-    <!-- Load CSS non-blocking -->
-    <link rel="preload" href="./styles/tailwind.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="./styles/tailwind.css"></noscript>
-
-    <!-- Preload hero image for better LCP -->
-    <link rel="preload" as="image" href="hero_img.jpg" imagesrcset="hero_img.jpg 360w, hero_img.jpg 520w" imagesizes="(min-width: 768px) 455px, calc(100vw - 3rem)" fetchpriority="high" />
-
-  <style>
-    :root {
-      --brand-primary: #4338ca;
-      --brand-primary-hover: #3730a3;
-    }
-
-    .bg-primary {
-      background-color: var(--brand-primary) !important;
-    }
-
-    .text-primary {
-      color: var(--brand-primary) !important;
-    }
-
-    .hover\:bg-primary\/90:hover,
-    .hover\:bg-primary:hover {
-      background-color: var(--brand-primary-hover) !important;
-    }
-
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.26);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-      backdrop-filter: blur(14px) saturate(160%);
-      -webkit-backdrop-filter: blur(14px) saturate(160%);
-    }
-
-    .dark .glass-nav {
-      /* Dark-mode navbar color updated per request */
-      background: #1F2937;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-    }
-
-    .theme-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      border-radius: 9999px;
-      border: 1px solid #7dd3fc;
-      background: linear-gradient(120deg, #e0f2fe, #cffafe);
-      color: #0c4a6e;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      padding: 0.5rem 0.9rem;
-      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
-    }
-
-    .theme-switch:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.18);
-    }
-
-    .theme-switch .theme-icons {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.2rem;
-      height: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .theme-switch .theme-icon {
-      width: 1rem;
-      height: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0c4a6e;
-      transition: color 180ms ease, transform 180ms ease;
-    }
-
-    .theme-switch[data-mode="dark"] {
-      border-color: #4338ca;
-      background: linear-gradient(135deg, #4338ca, #3730a3);
-      color: #fff;
-      box-shadow: 0 4px 15px rgba(67, 56, 202, 0.3);
-    }
-
-    .theme-switch[data-mode="dark"]:hover {
-      box-shadow: 0 8px 25px rgba(67, 56, 202, 0.5);
-    }
-
-    .theme-switch[data-mode="dark"] .theme-icon {
-      color: #fff;
-    }
-
-    .theme-switch .theme-label {
-      display: inline-block;
-      white-space: nowrap;
-    }
-
-    .theme-switch:hover .theme-icon {
-      transform: rotate(20deg);
-    }
-
-    .service-card {
-      transition:
-        transform 220ms ease,
-        box-shadow 220ms ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/tailwind.css">
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 transition duration-300">
@@ -134,7 +16,8 @@
         <a href="#" class="flex items-center gap-2.5 group">
           <span
             class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-primary shadow-md group-hover:shadow-lg transition-shadow dark:bg-gradient-to-br dark:from-primary dark:to-indigo-600 dark:text-white">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6L2 12l6 6" />
             </svg>
           </span>
@@ -163,38 +46,41 @@
 
           <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="theme-switch" data-mode="light">
             <span class="theme-icons inline-flex items-center" aria-hidden="true">
-              <svg class="theme-icon theme-sun w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 3.75a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 3.75zM12 20.25a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 20.25zM4.97 5.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM17.97 18.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM3.75 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 013.75 12zM20.25 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 0120.25 12zM4.97 18.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM17.97 5.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" />
+              <svg class="theme-icon theme-sun w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 3.75a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 3.75zM12 20.25a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 20.25zM4.97 5.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM17.97 18.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM3.75 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 013.75 12zM20.25 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 0120.25 12zM4.97 18.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM17.97 5.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" />
               </svg>
-              <svg class="theme-icon theme-moon w-4 h-4 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <svg class="theme-icon theme-moon w-4 h-4 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
                 <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
               </svg>
             </span>
             <span class="theme-label">LIGHT</span>
           </button>
         </div>
-
         <div class="flex items-center space-x-3 md:hidden">
-            <button id="theme-toggle-mobile" type="button" aria-label="Toggle dark mode" class="theme-switch"
+          <button id="theme-toggle-mobile" type="button" aria-label="Toggle dark mode" class="theme-switch"
             data-mode="light">
             <span class="theme-icons inline-flex items-center" aria-hidden="true">
-              <svg class="theme-icon theme-sun w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 3.75a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 3.75zM12 20.25a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 20.25zM4.97 5.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM17.97 18.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM3.75 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 013.75 12zM20.25 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 0120.25 12zM4.97 18.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM17.97 5.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" />
+              <svg class="theme-icon theme-sun w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 3.75a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 3.75zM12 20.25a.75.75 0 01.75-.75h0a.75.75 0 010 1.5h0A.75.75 0 0112 20.25zM4.97 5.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM17.97 18.47a.75.75 0 011.06 0l0 0a.75.75 0 01-1.06 1.06l0 0a.75.75 0 010-1.06zM3.75 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 013.75 12zM20.25 12a.75.75 0 01-.75-.75v0a.75.75 0 011.5 0v0A.75.75 0 0120.25 12zM4.97 18.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM17.97 5.53a.75.75 0 010-1.06l0 0a.75.75 0 011.06 1.06l0 0a.75.75 0 01-1.06 0zM12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" />
               </svg>
-              <svg class="theme-icon theme-moon w-4 h-4 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <svg class="theme-icon theme-moon w-4 h-4 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
                 <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
               </svg>
             </span>
             <span class="theme-label">LIGHT</span>
           </button>
-
           <button id="menu-btn" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"
             class="rounded px-2 py-1 text-2xl text-gray-800 transition hover:bg-gray-200/60 dark:text-gray-200 dark:hover:bg-gray-700/60">
             =
           </button>
         </div>
       </div>
-
       <div id="mobile-menu" class="hidden px-6 pb-4 md:hidden">
         <a href="#" class="block py-2 text-gray-800 dark:text-gray-200">Home</a>
         <a href="#" class="block py-2 text-gray-800 dark:text-gray-200">About</a>
@@ -204,160 +90,11 @@
     </nav>
   </header>
 
-  <!-- hero section -->
-  <main class="pt-20">
-    <section
-      class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 px-6 py-12 text-gray-800 dark:text-gray-200 md:grid-cols-2">
-      <div class="text-left">
-        <h1 class="text-4xl font-bold leading-tight md:text-5xl">
-          We build digital experiences
-        </h1>
-        <p class="mt-4 max-w-xl text-lg text-gray-700 dark:text-gray-300">
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos rerum
-          facere, qui quis ad numquam. -->
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellendus praesentium excepturi rem
-          illum, dolore, corporis nostrum quibusdam ex facere non! Molestiae a corrupti optio reiciendis pariatur
-          assumenda error laboriosam.
-        </p>
-        <button class="mt-6 rounded bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary/90">
-          Get Started
-        </button>
-      </div>
 
-      <div>
-        <img src="hero_img.jpg" srcset=" hero_img.jpg 360w, hero_img.jpg 520w"
-          sizes="(min-width: 768px) 455px, calc(100vw - 3rem)" alt="Team collaborating on digital product strategy"
-          width="520" height="303" decoding="async" fetchpriority="high" class="w-full rounded-xl shadow-lg" />
-      </div>
-    </section>
+  <div id="main"></div>
+  <div id="footer"></div>
 
-    <!-- services section -->
-    <section class="bg-gray-50 dark:bg-gray-800 py-12">
-      <div class="mx-auto max-w-7xl px-6 text-center text-gray-800 dark:text-gray-200">
-        <h2 class="text-3xl font-bold">Our Services</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
-          We offer a wide range of services to help your business succeed in
-          the digital world.
-        </p>
-
-        <div class="mt-10 grid gap-8 md:grid-cols-3">
-          <div class="service-card rounded-lg border bg-white p-6 text-left dark:bg-gray-900">
-            <h3 class="text-xl font-semibold">SEO</h3>
-            <p class="mt-2 text-gray-700 dark:text-gray-300">
-              Boosting your Google rankings and driving organic traffic with advanced SEO strategies.
-            </p>
-          </div>
-
-          <div class="service-card rounded-lg border bg-white p-6 text-left dark:bg-gray-900">
-            <h3 class="text-xl font-semibold">Web Dev</h3>
-            <p class="mt-2 text-gray-700 dark:text-gray-300">
-              Developing high-performance websites that deliver seamless user experiences.
-            </p>
-          </div>
-
-          <div class="service-card rounded-lg border bg-white p-6 text-left dark:bg-gray-900">
-            <h3 class="text-xl font-semibold">Marketing</h3>
-            <p class="mt-2 text-gray-700 dark:text-gray-300">
-              Expanding your digital reach and growing your audience effectively.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- footer -->
-  <footer class="bg-gray-900 text-gray-300">
-    <div class="mx-auto max-w-7xl px-6 py-14 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
-      <div>
-        <div class="flex items-center gap-3">
-          
-           
-            <a href="#" class="flex items-center gap-2.5 group">
-          <span
-            class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-primary shadow-md group-hover:shadow-lg transition-shadow dark:bg-gradient-to-br dark:from-primary dark:to-indigo-600 dark:text-white">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6L2 12l6 6" />
-            </svg>
-          </span>
-          <span
-            class="text-xl font-bold text-primary dark:bg-gradient-to-r dark:from-primary dark:to-indigo-400 dark:bg-clip-text dark:text-transparent"> Prodesk
-            IT
-          </span>
-        </a>
-
-
-        </div>
-        <p class="mt-3 text-sm leading-relaxed text-gray-400">
-          Building high-impact digital solutions to scale your business and engage your customers.
-        </p>
-      </div>
-
-      <div>
-        <h4 class="text-sm font-semibold uppercase tracking-widest text-white">
-          Quick Links
-        </h4>
-        <ul class="mt-4 space-y-2 text-sm">
-          <li><a href="#" class="transition hover:text-white">Home</a></li>
-          <li><a href="#" class="transition hover:text-white">About</a></li>
-          <li>
-            <a href="#" class="transition hover:text-white">Services</a>
-          </li>
-          <li><a href="#" class="transition hover:text-white">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-sm font-semibold uppercase tracking-widest text-white">
-          Services
-        </h4>
-        <ul class="mt-4 space-y-2 text-sm">
-          <li>
-            <a href="#" class="transition hover:text-white">SEO</a>
-          </li>
-          <li>
-            <a href="#" class="transition hover:text-white">Web Development</a>
-          </li>
-          <li>
-            <a href="#" class="transition hover:text-white">Marketing</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-sm font-semibold uppercase tracking-widest text-white">
-          Connect
-        </h4>
-        <p class="mt-4 text-sm text-gray-400">Prodesk IT</p>
-        <p class="text-sm text-gray-400">+91 xxxxxxxxxx</p>
-        <div class="mt-4 flex gap-3">
-          <a href="" aria-label="LinkedIn" class="p-2 rounded bg-gray-800 hover:bg-primary transition">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88071 3.88071 6 2.5 6C1.11929 6 0 4.88071 0 3.5C0 2.11929 1.11929 1 2.5 1C3.88071 1 4.98 2.11929 4.98 3.5ZM0 8H5V24H0V8ZM9 8H14V10.2C14.66 9.1 16.2 8 18.5 8C22.5 8 24 10.5 24 15.2V24H19V16.2C19 14 18.5 12.2 16 12.2C13.5 12.2 13 14 13 16V24H9V8Z"/></svg>
-          </a>
-          <a href="" aria-label="X (Twitter)" class="p-2 rounded bg-gray-800 hover:bg-primary transition">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482A13.944 13.944 0 011.671 3.149a4.916 4.916 0 001.523 6.574 4.9 4.9 0 01-2.229-.616v.062a4.916 4.916 0 003.946 4.816 4.902 4.902 0 01-2.224.085 4.918 4.918 0 004.588 3.417A9.867 9.867 0 010 19.54a13.94 13.94 0 007.548 2.212c9.057 0 14.01-7.506 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"/></svg>
-          </a>
-          <a href="" aria-label="Instagram" class="p-2 rounded bg-gray-800 hover:bg-primary transition">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm8 3a1 1 0 100 2 1 1 0 000-2zM12 7.5A4.5 4.5 0 107.5 12 4.5 4.5 0 0012 7.5z"/></svg>
-          </a>
-          <a href="" aria-label="Facebook" class="p-2 rounded bg-gray-800 hover:bg-primary transition">
-            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.2 1.3-3.4 3.3-3.4.96 0 1.98.17 1.98.17v2.2h-1.12c-1.1 0-1.44.68-1.44 1.37V12h2.46l-.39 2.9h-2.07v7A10 10 0 0022 12z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- bottom bar -->
-    <div class="border-t border-gray-700">
-      <div
-        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-gray-400 sm:flex-row">
-        <span>&copy; 2026 Prodesk IT. All rights reserved.</span>
-        <div class="flex gap-4">
-          <a href="#" class="transition hover:text-white">Privacy Policy</a>
-          <a href="#" class="transition hover:text-white">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
- <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

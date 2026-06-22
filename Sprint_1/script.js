@@ -1,62 +1,65 @@
 
-const root = document.documentElement;
-const themeToggleButtons = document.querySelectorAll("#theme-toggle, #theme-toggle-mobile");
-const menuButton = document.getElementById("menu-btn");
+const html = document.documentElement;
+const themeBtns = document.querySelectorAll("#theme-toggle, #theme-toggle-mobile");
+const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
- 
-const storedTheme = localStorage.getItem("theme");
-if (storedTheme === "dark") {
-  root.classList.add("dark");
+if (localStorage.getItem("theme") === "dark") {
+  html.classList.add("dark");
 }
 
-function updateThemeUI() {
-  const isDark = root.classList.contains("dark");
-  
-  themeToggleButtons.forEach((button) => {
-    const sunIcon = button.querySelector(".theme-sun");
-    const moonIcon = button.querySelector(".theme-moon");
-    const label = button.querySelector(".theme-label");
-    
-    if (sunIcon && moonIcon) {
-      // Show sun in light mode, moon in dark mode
-      if (isDark) {
-        sunIcon.classList.add("hidden");
-        moonIcon.classList.remove("hidden");
-      } else {
-        sunIcon.classList.remove("hidden");
-        moonIcon.classList.add("hidden");
-      }
+function syncThemeUI() {
+  const isDark = html.classList.contains("dark");
+
+  themeBtns.forEach(btn => {
+
+    const sun = btn.querySelector(".theme-sun");
+    const moon = btn.querySelector(".theme-moon");
+    const label = btn.querySelector(".theme-label");
+
+    if (sun && moon) {
+      sun.classList.toggle("hidden", isDark);
+      moon.classList.toggle("hidden", !isDark);
     }
-    
-    if (label) {
-      label.textContent = isDark ? "DARK" : "LIGHT";
-    }
-    
-    button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-    button.dataset.mode = isDark ? "dark" : "light";
+
+    if (label) label.textContent = isDark ? "DARK" : "LIGHT";
+
+    btn.setAttribute("aria-label", isDark ? "Light mode" : "Dark mode");
   });
 }
 
-// Toggle theme on button click
-themeToggleButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    root.classList.toggle("dark");
-    localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
-    updateThemeUI();
+
+themeBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const activeDark = html.classList.toggle("dark");
+    localStorage.setItem("theme", activeDark ? "dark" : "light");
+    syncThemeUI();
   });
 });
 
-// Mobile menu toggle
-if (menuButton && mobileMenu) {
-  menuButton.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.toggle("hidden");
-    menuButton.setAttribute("aria-expanded", !isHidden);
-    menuButton.setAttribute("aria-label", isHidden ? "Open menu" : "Close menu");
-    menuButton.textContent = isHidden ? "=" : "X";
+
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    const isOpen = !mobileMenu.classList.contains("hidden");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+
+    menuBtn.textContent = isOpen ? "X" : "=";
   });
 }
 
-// Initialize UI on page load
-updateThemeUI();
-  
+syncThemeUI();
+
+
+const loadHTML = async (elementId, filePath) => {
+  try {
+    const res = await fetch(filePath);
+    document.getElementById(elementId).innerHTML = await res.text();
+  } catch (err) {
+    console.error(`Failed to load ${filePath}:`, err);
+  }
+};
+
+loadHTML("main", "main.html");
+loadHTML("footer", "footer.html");

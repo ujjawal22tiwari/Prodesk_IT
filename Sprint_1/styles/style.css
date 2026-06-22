@@ -1,0 +1,131 @@
+ :root {
+      --brand-primary: #4338ca;
+      --brand-primary-hover: #3730a3;
+    }
+
+    .bg-primary {
+      background-color: var(--brand-primary) !important;
+    }
+
+    .text-primary {
+      color: var(--brand-primary) !important;
+    }
+
+    .hover\:bg-primary\/90:hover,
+    .hover\:bg-primary:hover {
+      background-color: var(--brand-primary-hover) !important;
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.26);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(14px) saturate(160%);
+      -webkit-backdrop-filter: blur(14px) saturate(160%);
+    }
+
+    .dark .glass-nav {
+      background: #1F2937;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .theme-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 9999px;
+      border: 1px solid #7dd3fc;
+      background: linear-gradient(120deg, #e0f2fe, #cffafe);
+      color: #0c4a6e;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.9rem;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .theme-switch:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(8, 145, 178, 0.18);
+    }
+
+    .theme-switch .theme-icons {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.2rem;
+      height: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .theme-switch .theme-icon {
+      width: 1rem;
+      height: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0c4a6e;
+      transition: color 180ms ease, transform 180ms ease;
+    }
+
+    .theme-switch[data-mode="dark"] {
+      border-color: #4338ca;
+      background: linear-gradient(135deg, #4338ca, #3730a3);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(67, 56, 202, 0.3);
+    }
+
+    .theme-switch[data-mode="dark"]:hover {
+      box-shadow: 0 8px 25px rgba(67, 56, 202, 0.5);
+    }
+
+    .theme-switch[data-mode="dark"] .theme-icon {
+      color: #fff;
+    }
+
+    .theme-switch .theme-label {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .theme-switch:hover .theme-icon {
+      transform: rotate(20deg);
+    }
+
+    .service-card {
+      transition:
+        transform 220ms ease,
+        box-shadow 220ms ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    }
+  
+
+    .icons{
+    font-size: 17px;
+        
+    }
+
+     .fa-whatsapp:hover{
+        font-size: 20px;
+        color: green;
+    }
+    .fa-facebook-f:hover{
+        font-size: 20px;
+        color: blue;
+    }
+  
+    .fa-instagram:hover{
+        font-size: 20px;
+        color: #F704C7;
+    }
+
+    .fa-linkedin-in:hover{
+        font-size: 20px;
+        color:  #007BB6 ;
+    }
+
+
+ 

@@ -1,3 +1,10 @@
+
+# AI Interaction Log - Project Development
+
+## Phase 3: Tailwind Integration & Bug Fixes
+
+### Prompt 1: Dark Mode Visibility & Navigation Highlight
+**Query:**
 I have two issues on my website that need to be fixed.
 
 1. Dark mode text visibility:
@@ -6,4 +13,5 @@ I have two issues on my website that need to be fixed.
 2. Active navigation link highlighting:
    When a user clicks a navigation link, that link should get a `highlighted` class, and the `highlighted` class should be removed from the other navigation links. Please implement this behavior so only one nav link stays highlighted at a time.
 
-when i use the tailwind via cdn the performance is very bad and the website takes a long time to load. I want to switch to using Tailwind via npm and build process. Please provide instructions on how to set up Tailwind CSS in my project using npm, including how to configure the build process to generate the necessary CSS file for my website.To set up Tailwind CSS in your project using npm and configure the build process, follow these steps
+**Tool Used:** Gemini
+**Outcome:** Fixed the dark mode utility class conflict and implemented the active navigation link toggle logic in JavaScript.
