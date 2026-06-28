@@ -17,6 +17,7 @@ This repository documents the technical contributions, core modules, and full-st
 | Sl. No. |Project| Core Focus | Stack Used | Live Link |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 |Prodesk Landing Page|Responsive marketing landing page|HTML5, Tailwind CSS, Node.js| [Live Link](https://prodesk-theta.vercel.app/) |
+| 2 |Cash Flow Dashboard|Personal finance tracking and reporting|HTML5, JavaScript, Tailwind CSS, Chart.js, jsPDF| [Live Link](https://prodesksprint2.vercel.app/) |
 
 ---
 ## Sprint_1 - Prodesk Landing Page
